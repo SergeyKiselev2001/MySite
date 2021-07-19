@@ -1,0 +1,7 @@
+npm js модули нод жс
+
+regex101.com проверить регул€рки
+
+browserify - компоновщик модулей дл€ веба
+
+requirejs  - RequireJS is a JavaScript file and module loader.
