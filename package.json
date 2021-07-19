@@ -1,0 +1,28 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "nodejs project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeyKiselev2001/MySite.git"
+  },
+  "author": "kiselev-sergey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeyKiselev2001/MySite/issues"
+  },
+  "homepage": "https://github.com/SergeyKiselev2001/MySite#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "http": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
