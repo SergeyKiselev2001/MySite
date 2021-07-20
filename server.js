@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import { dateTime } from "./middleware.js";
+import { dateTime, logger} from "./middleware.js";
 
 const __dirname = path.resolve();
 
@@ -9,13 +9,13 @@ var server = express();
 
 server.use(express.static(path.resolve(__dirname, "frontend")));
  //подключение middleware
-server.use(dateTime);
+server.use(dateTime, logger);
 // instead
 //server.get('/features', (req, res)=>{res.sendFile(__dirname, 'frontend', 'features.html')});
 
 
 server.get('/', (req, res)=>{
-  console.log('fafa');
+ 
   res.sendFile(path.resolve(__dirname, 'frontend','index.html'));
 });
 
@@ -23,7 +23,9 @@ server.get('/', (req, res)=>{
 server.get('/download', (req, res)=>{
   //использование middleware
   console.log(req.dateTime);
+  
   res.download(path.resolve(__dirname, 'data','data.rar'));
+ // req.logger();
 });
 
 

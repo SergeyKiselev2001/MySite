@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "nodejs project",
   "main": "server.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/SergeyKiselev2001/MySite#readme",
   "dependencies": {
     "chalk": "^4.1.1",
+    "colors": "^1.4.0",
     "express": "^4.17.1",
     "http": "0.0.1-security"
   },
