@@ -23,11 +23,11 @@ server.use(dateTime, logger);
 
 
 server.get('/', (req, res)=>{
-  res.render('indexx', {name: {haha : 22}});
+  res.render('indexx', {name: {haha : 22}, active : "index"});
 });
 
 server.get('/features', (req, res)=>{
-  res.render('indexx', {name : {haha: 'features'}});
+  res.render('indexx', {name : {haha: 'features'}, active : "features"});
 });
 
 //Download index
