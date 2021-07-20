@@ -2,6 +2,8 @@
 <body>
     <%- include('partials/navbar.ejs') %>
     <div class="container">   <h1><%= name.haha %></h1></div>
- 
+    <div class="who"><% if (data.name == 'sergey'){ %>О, привет!!! я тебя знаю!!, ты же <%= data.name%><% } else {
+        %> 'Ты ,<%= data.name%>, кто такой иди нахуй'<%
+    } %></div>
 </body>
 </html>

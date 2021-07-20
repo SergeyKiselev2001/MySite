@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import { dateTime, logger} from "./middleware.js";
+import serverRouts from "./routes/servers.js";
 
 const __dirname = path.resolve();
 
@@ -14,6 +15,8 @@ server.set('view engine', 'ejs');
 server.set('views', path.resolve(__dirname, 'ejs'));
 console.log(server.get('views'));
 
+server.use(serverRouts);
+
 // уже не надо так как перешли на ejs
 //server.use(express.static(path.resolve(__dirname, "frontend")));
 //подключение middleware
@@ -23,11 +26,13 @@ server.use(dateTime, logger);
 
 
 server.get('/', (req, res)=>{
-  res.render('indexx', {name: {haha : 22}, active : "index"});
+  res.render('indexx', {name: {haha : 22}, active : "index", data : {name : 'Sasha', age : 22}});
 });
 
+
+
 server.get('/features', (req, res)=>{
-  res.render('indexx', {name : {haha: 'features'}, active : "features"});
+  res.render('indexx', {name : {haha: 'features'}, active : "features", data : {name : 'sergey', age : 22}});
 });
 
 //Download index
