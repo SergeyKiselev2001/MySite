@@ -7,6 +7,14 @@ const __dirname = path.resolve();
 const PORT = 5000;
 var server = express();
 
+
+server.set('view engine', 'ejs');
+
+// переназначили папку views --> templates
+server.set('views', path.resolve(__dirname, 'templates'));
+console.log(server.get('views'));
+
+
 server.use(express.static(path.resolve(__dirname, "frontend")));
  //подключение middleware
 server.use(dateTime, logger);
